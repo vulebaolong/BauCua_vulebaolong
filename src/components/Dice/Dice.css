@@ -1,0 +1,50 @@
+.scene {
+    width: 50px;
+    height: 50px;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transition: transform infinite;
+    transform-style: preserve-3d;
+    transform: rotateY(-13deg) rotateX(17deg) rotateZ(-3deg);
+}
+
+.cube__face {
+    border: 2px solid black;
+    position: absolute;
+    /* opacity: 0.7; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one {
+    transform: translateZ(25px);
+}
+
+.two {
+    transform: translateX(-25px) rotateY(-90deg);
+}
+
+.three {
+    transform: translateY(25px) rotateX(90deg);
+}
+
+.four {
+    transform: translateY(-25px) rotateX(90deg);
+}
+
+.five {
+    transform: translateX(25px) rotateY(90deg);
+}
+
+.six {
+    transform: translateZ(-25px);
+}
+
+label {
+    margin-right: 10px;
+}
