@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import Item from "./Item";
 
 function ListItem() {
+    console.log("render ListItem");
     const listItem = useSelector((state) => state.bauCuaReducer.listItem);
     return (
         <div className="grid grid-cols-3 gap-4 ">

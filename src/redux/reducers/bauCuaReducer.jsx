@@ -42,7 +42,12 @@ export const bauCuaReducer = (state = initialState, { type, payload }) => {
                 }
             }
 
-            return copyState;
+            // return copyState;
+            return {
+                ...state,
+                listItem: copyState.listItem,
+                allPoint: copyState.allPoint,
+            };
         }
 
         case "PLAY": {
@@ -51,7 +56,6 @@ export const bauCuaReducer = (state = initialState, { type, payload }) => {
             // Xử lý random
             copyState.arrDice.forEach((_, i) => {
                 const index = Math.floor(Math.random() * 6);
-                console.log(index);
                 copyState.arrDice[i] = copyState.listItem[index];
             });
 
